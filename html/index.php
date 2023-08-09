@@ -6,6 +6,10 @@
     <title>TODO-app</title>
 </head>
 <body>
-    <?php echo 'Docker起動中'; ?>
+   <h1>TODO</h1>
+   <form action="todo_create.php" method="post">
+   <input type="text" name="todo">
+   <button type="submit">追加</button>
+   </form>
 </body>
 </html>
