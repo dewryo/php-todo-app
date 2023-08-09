@@ -30,8 +30,8 @@
     while ($todo = $todos->fetch_assoc()):?>
     <ul>
         <li><?php echo htmlspecialchars($todo["todo"]);?>
-            <a href="update.php?=id<?php echo $todo["id"];?>">編集</a>
-            <a href="delete.php?=id<?php echo $todo["id"];?>">削除</a>
+            <a href="update.php?id=<?php echo $todo["id"];?>">編集</a>
+            <a href="delete.php?id=<?php echo $todo["id"];?>">削除</a>
         </li>
     </ul>
     <?php endwhile; ?>
