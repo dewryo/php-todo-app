@@ -6,6 +6,7 @@
     <title>TODO-app</title>
 </head>
 <body>
+    <!--入力/送信画面-->
    <h1>TODO</h1>
    <form action="todo_create.php" method="post">
    <input type="text" name="todo">
@@ -13,10 +14,23 @@
    </form>
 
    <?php
+   #DB接続
    require('dbconnect.php');
    $success = $db;
    if(!$success){
     echo $db->error;}
    ?>
+
+   <?php
+   #todoリスト一覧表示
+   $todos = $db->query('select * from todos order by id desc');
+   if(!$todos){
+    echo $db->error;
+    }
+    while ($todo = $todos->fetch_assoc()):?>
+    <ul>
+        <li><?php echo htmlspecialchars($todo["todo"]);?></li>
+    </ul>
+    <?php endwhile; ?>
 </body>
 </html>
