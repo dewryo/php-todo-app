@@ -26,8 +26,8 @@ if(!$result){
      <!--編集/送信画面-->
    <h1>Edit</h1>
    <form action="todo_update.php" method="post">
-
    <input type="text" name="todo" value="<?php echo $todo; ?>">
+   <input type="hidden" namne ="id" value="<?php echo $id; ?>">
    <button type="submit">編集</button>
    </form>
 
