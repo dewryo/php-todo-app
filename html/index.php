@@ -15,11 +15,8 @@
    <?php
    require('dbconnect.php');
    $success = $db;
-   if($success){
-    echo "DB接続";
-   }else{
-    echo $db->error;
-   }
+   if(!$success){
+    echo $db->error;}
    ?>
 </body>
 </html>
