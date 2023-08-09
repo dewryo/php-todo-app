@@ -11,5 +11,15 @@
    <input type="text" name="todo">
    <button type="submit">追加</button>
    </form>
+
+   <?php
+   require('dbconnect.php');
+   $success = $db;
+   if($success){
+    echo "DB接続";
+   }else{
+    echo $db->error;
+   }
+   ?>
 </body>
 </html>
